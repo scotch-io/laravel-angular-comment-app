@@ -19,17 +19,14 @@ $app = new Illuminate\Foundation\Application;
 |--------------------------------------------------------------------------
 |
 | Laravel takes a dead simple approach to your application environments
-| so you can just specify a machine name or HTTP host that matches a
+| so you can just specify a machine name for the host that matches a
 | given environment, then we will automatically detect it for you.
 |
 */
 
 $env = $app->detectEnvironment(array(
 
-	'local'   => array('your-machine-name'),
-	'chris'   => array('app.dev', 'app.local'),
-	'ducks'   => array('menucloud.ducks.io'),
-	'stephen' => array('app.env', 'dev.env')
+	'local' => array('your-machine-name'),
 
 ));
 
@@ -51,7 +48,7 @@ $app->bindInstallPaths(require __DIR__.'/paths.php');
 | Load The Application
 |--------------------------------------------------------------------------
 |
-| Here we will load the Illuminate application. We'll keep this is in a
+| Here we will load this Illuminate application. We will keep this in a
 | separate location so we can isolate the creation of an application
 | from the actual running of the application with a given request.
 |

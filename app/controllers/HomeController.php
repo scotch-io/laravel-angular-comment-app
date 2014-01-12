@@ -2,14 +2,9 @@
 
 class HomeController extends BaseController {
 
-	public function showHome()
+	public function showWelcome()
 	{
-		return View::make('index');
-	}
-
-	public function missingMethod()
-	{
-		return View::make('index');
+		return View::make('hello');
 	}
 
 }

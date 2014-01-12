@@ -2,6 +2,7 @@
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
+	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*"
 	},
@@ -17,12 +18,11 @@
 	},
 	"scripts": {
 		"post-install-cmd": [
+			"php artisan clear-compiled",
 			"php artisan optimize"
 		],
-		"pre-update-cmd": [
-			"php artisan clear-compiled"
-		],
 		"post-update-cmd": [
+			"php artisan clear-compiled",
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
@@ -32,5 +32,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "stable"
 }

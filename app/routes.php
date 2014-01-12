@@ -1,13 +1,11 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Basic Page Routes
-|--------------------------------------------------------------------------
-|
-*/
-
 Route::get('/', function()
 {
-	return View::make('index');	
+	return View::make('index');
+});
+
+App::missing(function($exception)
+{
+	return View::make('index');
 });
