@@ -1,1 +1,1 @@
-var commentApp = angular.module('commentApp', ['main', 'commentService']);
+var commentApp = angular.module('commentApp', ['mainCtrl', 'commentService']);
