@@ -4,16 +4,16 @@ angular.module('commentService', [])
 
 		return {
 			get : function() {
-
+				return $http.get('/api/comments');
 			},
-			find : function(id) {
-
+			show : function(id) {
+				return $http.get('/api/comments/' + id);
 			},
 			save : function(commentData) {
-
+				return $http.post('/api/comments', commentData);
 			},
-			delete : function(id) {
-
+			destroy : function(id) {
+				return $http.delete('/api/comments/' + id);
 			}
 		}
 
