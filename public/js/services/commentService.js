@@ -10,7 +10,12 @@ angular.module('commentService', [])
 				return $http.get('/api/comments/' + id);
 			},
 			save : function(commentData) {
-				return $http.post('/api/comments', commentData);
+				return $http({
+					method: 'POST',
+					url: '/api/comments',
+					headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
+					data: commentData
+				});
 			},
 			destroy : function(id) {
 				return $http.delete('/api/comments/' + id);

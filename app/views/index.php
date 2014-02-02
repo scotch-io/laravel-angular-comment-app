@@ -37,12 +37,12 @@
 
 		<!-- AUTHOR -->
 		<div class="form-group">
-			<input type="text" class="form-control input-sm" name="author" ng-model="newComment.author" placeholder="Name">
+			<input type="text" class="form-control input-sm" name="author" ng-model="commentData.author" placeholder="Name">
 		</div>
 
 		<!-- COMMENT TEXT -->
 		<div class="form-group">
-			<input type="text" class="form-control input-lg" name="comment" ng-model="newComment.text" placeholder="Say what you have to say">
+			<input type="text" class="form-control input-lg" name="comment" ng-model="commentData.text" placeholder="Say what you have to say">
 		</div>
 		
 		<!-- SUBMIT BUTTON -->
