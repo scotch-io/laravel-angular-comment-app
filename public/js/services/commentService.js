@@ -14,7 +14,7 @@ angular.module('commentService', [])
 					method: 'POST',
 					url: '/api/comments',
 					headers: { 'Content-Type' : 'application/x-www-form-urlencoded' },
-					data: commentData
+					data: $.param(commentData)
 				});
 			},
 			destroy : function(id) {

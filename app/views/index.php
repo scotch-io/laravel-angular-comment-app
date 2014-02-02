@@ -6,6 +6,7 @@
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> <!-- load bootstrap via cdn -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
 	<style>
 		body 		{ padding-top:30px; }
 		form 		{ padding-bottom:20px; }
@@ -51,9 +52,13 @@
 		</div>
 	</form>
 
+	<!-- LOADING ICON -->
+	<!-- show loading icon if the loading variable is set to true -->
+	<p class="text-center" ng-show="loading"><span class="fa fa-meh-o fa-5x fa-spin"></span></p>
 
 	<!-- THE COMMENTS -->
-	<div class="comment" ng-repeat="comment in comments">
+	<!-- hide these comments if the loading variable is true -->
+	<div class="comment" ng-hide="loading" ng-repeat="comment in comments">
 		<h3>Comment #{{ comment.id }} <small>by {{ comment.author }}</h3>
 		<p>{{ comment.text }}</p>
 
