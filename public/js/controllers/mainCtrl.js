@@ -30,6 +30,9 @@ angular.module('mainCtrl', [])
 							$scope.loading = false;
 						});
 
+				})
+				.error(function(data) {
+					console.log(data);
 				});
 		};
 
