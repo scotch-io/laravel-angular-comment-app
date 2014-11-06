@@ -22,7 +22,7 @@ angular.module('mainCtrl', [])
 			// save the comment. pass in comment data from the form
 			Comment.save($scope.commentData)
 				.success(function(data) {
-
+					$scope.commentData = {};
 					// if successful, we'll need to refresh the comment list
 					Comment.get()
 						.success(function(getData) {
