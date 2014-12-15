@@ -64,7 +64,7 @@
 	<!-- THE COMMENTS -->
 	<!-- hide these comments if the loading variable is true -->
 	<div class="comment" ng-hide="loading" ng-repeat="comment in comments">
-		<h3>Comment #{{ comment.id }} <small>by {{ comment.author }}</h3>
+		<h3>Comment #{{ comment.id }} <small>by {{ comment.author }}</small></h3>
 		<p>{{ comment.text }}</p>
 
 		<p><a href="#" ng-click="deleteComment(comment.id)" class="text-muted">Delete</a></p>
